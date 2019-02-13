@@ -23,7 +23,9 @@ public class HomepageMyntraTest extends TestBase {
 	public void setup() throws FileNotFoundException, InterruptedException {
 		initialization();
 		loginpage=new LoginPageMyntra();
+		homepage=new HomepageMyntra();
 		homepage=loginpage.verify_login(prop.getProperty("username"), prop.getProperty("password"));
+		
 	}
 	
 	@Test
