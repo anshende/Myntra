@@ -31,7 +31,7 @@ public class HomepageMyntra extends TestBase {
 	public TshirtpageMyntra men_cat() {
 		Actions action=new Actions(driver);
 		action.moveToElement(men).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(men_tshirt));
+		wait.until(ExpectedConditions.elementToBeClickable(men_tshirt)).click();
 		
 		return new TshirtpageMyntra();
 	}

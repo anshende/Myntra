@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 
 import com.basepackage.TestBase;
 import com.qa.pages.HomepageMyntra;
+import com.qa.pages.LoginPageMyntra;
 import com.qa.pages.TshirtpageMyntra;
 
 public class HomepageMyntraTest extends TestBase {
-	
+	LoginPageMyntra loginpage;
 	HomepageMyntra homepage;
 	TshirtpageMyntra tshirt;
 	
@@ -19,9 +20,10 @@ public class HomepageMyntraTest extends TestBase {
 	}
 	
 	@BeforeClass
-	public void setup() throws FileNotFoundException {
+	public void setup() throws FileNotFoundException, InterruptedException {
 		initialization();
-		homepage=new HomepageMyntra();
+		loginpage=new LoginPageMyntra();
+		homepage=loginpage.verify_login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 	@Test
