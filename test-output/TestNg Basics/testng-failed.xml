@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNg Basics]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="test(failed)">
+    <parameter name="password" value=""/>
+    <parameter name="url" value="http://www.myntra.com"/>
+    <parameter name="username" value="aniketshende1304@gmail.com"/>
+    <classes>
+      <class name="testpackage.Demo2">
+        <methods>
+          <include name="myntra" invocation-numbers="0"/>
+          <include name="open_browser_and_enter_url"/>
+        </methods>
+      </class> <!-- testpackage.Demo2 -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [TestNg Basics] -->
