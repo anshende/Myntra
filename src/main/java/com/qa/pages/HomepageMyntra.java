@@ -13,12 +13,12 @@ import com.basepackage.TestBase;
 
 public class HomepageMyntra extends TestBase {
 	
-	WebDriverWait wait;
 	
-	@FindBy(xpath="//div[@class='desktop-navLinks']/div[1]")
+	
+	@FindBy(xpath="//div[@class='desktop-navLink']/a[@href='/shop/men']")
 	WebElement men;
 	
-	@FindBy(xpath="//ul[@class='desktop-navBlock']/li[2]/a[@href='https://www.myntra.com/men-tshirts']")
+	@FindBy(xpath="//a[@href='https://www.myntra.com/men-tshirts']")
 	WebElement men_tshirt;
 	
 	
@@ -28,11 +28,19 @@ public class HomepageMyntra extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public TshirtpageMyntra men_cat() {
+	public String homepagetitle() {
+		return driver.getTitle();
+	}
+	
+	public TshirtpageMyntra men_cat() throws InterruptedException {
+		Thread.sleep(4000);
+		wait=new WebDriverWait(driver,20);
 		Actions action=new Actions(driver);
-		action.moveToElement(men).perform();
-		wait.until(ExpectedConditions.elementToBeClickable(men_tshirt)).click();
-		
+		action.moveToElement(men).build().perform();
+		//action.click(men_tshirt);
+	     wait.until(ExpectedConditions.elementToBeClickable(men_tshirt)).click();
+		//men_tshirt.click();
+		Thread.sleep(5000);
 		return new TshirtpageMyntra();
 	}
    

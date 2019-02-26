@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.basepackage.TestBase;
@@ -28,7 +29,7 @@ public class LoginpageMyntraTest extends TestBase{
 		loginpage=new LoginPageMyntra();
 	}
 	
-	@Test(priority=1)
+	@Test(retryAnalyzer=com.retrylogic.retryTest.class, priority=1)
 	public void title() {
 		
 		String actual_title=loginpage.verify_title();
@@ -36,8 +37,8 @@ public class LoginpageMyntraTest extends TestBase{
 		Assert.assertEquals(actual_title, "Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");
 		
 	}
-	
-	@Test(priority=2)
+	 
+	@Test(retryAnalyzer=com.retrylogic.retryTest.class,priority=2)
 	public void loginmyntra() throws InterruptedException, FileNotFoundException {
 		homepage=loginpage.verify_login(prop.getProperty("username"),prop.getProperty("password"));
 	}

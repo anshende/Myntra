@@ -2,6 +2,7 @@ package com.testpackage;
 
 import java.io.FileNotFoundException;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,8 @@ import com.basepackage.TestBase;
 import com.qa.pages.HomepageMyntra;
 import com.qa.pages.LoginPageMyntra;
 import com.qa.pages.TshirtpageMyntra;
+
+
 
 public class HomepageMyntraTest extends TestBase {
 	LoginPageMyntra loginpage;
@@ -23,13 +26,22 @@ public class HomepageMyntraTest extends TestBase {
 	public void setup() throws FileNotFoundException, InterruptedException {
 		initialization();
 		loginpage=new LoginPageMyntra();
+		Thread.sleep(4000);
 		homepage=new HomepageMyntra();
 		homepage=loginpage.verify_login(prop.getProperty("username"), prop.getProperty("password"));
+		Thread.sleep(4000);
 		
 	}
 	
+	
 	@Test
-	public void mentshirt() {
+	public void verify_title() {
+		String title=homepage.homepagetitle();
+		Assert.assertEquals(title, "Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");	
+	}
+	
+	@Test
+	public void mentshirt() throws InterruptedException {
 		tshirt=homepage.men_cat();
 	}
 

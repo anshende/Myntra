@@ -20,6 +20,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 
 import com.test.util.testutil;
 
@@ -27,6 +28,8 @@ public class TestBase {
 	public static WebDriver driver;
 
     public static Properties prop;
+    
+    public static WebDriverWait wait;
     
     
     public TestBase() throws FileNotFoundException{
@@ -43,6 +46,8 @@ public class TestBase {
 		}
         
     }   
+    
+    
     public void initialization()
     {
     	String browsername=prop.getProperty("browser");
@@ -64,9 +69,7 @@ public class TestBase {
     	driver.manage().timeouts().implicitlyWait(testutil.IMPLICITLY_WAIT, TimeUnit.SECONDS);
     	
     	driver.get(prop.getProperty("url"));
-    	
-    	
-    	
+   	
     }
         
         

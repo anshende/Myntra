@@ -2,6 +2,7 @@ package com.qa.pages;
 
 import java.io.FileNotFoundException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,7 +14,7 @@ public class LoginPageMyntra extends TestBase{
 	@FindBy(className="desktop-user")
 	WebElement user;
 	
-	@FindBy(xpath="/html/body/div[1]/div/div/header/div[2]/div[2]/div/div[2]/div[2]/div[2]/a[2]")
+	@FindBy(xpath="//a[@href='/login?referer=https://www.myntra.com/']")
 	WebElement login;
 	
 	@FindBy(name="email")
@@ -44,6 +45,8 @@ public class LoginPageMyntra extends TestBase{
 		password.sendKeys(pwd);
 		
 		Thread.sleep(10000);
+		
+		System.out.println(driver.findElement(By.xpath("//img[@class='login-captcha']")).getText());
 		
 		loginbutton.click();
 		
