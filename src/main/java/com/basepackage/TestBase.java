@@ -10,12 +10,14 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -59,8 +61,8 @@ public class TestBase {
     	
     	else
     	{
-    		System.setProperty("webdriver.ie.driver", "C:\\Selenium\\IEDriverServer_x64_3.12.0\\IEDriverServer.exe");
-    		driver=new InternetExplorerDriver();
+    		System.setProperty("webdriver.firefox.driver", "C:\\Selenium\\FirefoxDriver\\geckodriver.exe");
+    		driver=new FirefoxDriver();
     	}
     	
     	driver.manage().window().maximize();
@@ -72,7 +74,23 @@ public class TestBase {
    	
     }
         
+        public void failed(String getmethodname) {
+        	
+        	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        	
+        	try {
+				FileUtils.copyFile(src, new File("C:\\Users\\Aniket\\eclipse-workspace\\maven-demo\\screenshots\\"+getmethodname+"_"+".jpg"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	
+        }
         
+        public void sendKeys(WebDriver driver, WebElement element, int timeout, String value) {
+        	new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(element));
+        	element.sendKeys(value);
+        }
     	
     	
     	

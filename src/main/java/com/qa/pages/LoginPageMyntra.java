@@ -41,8 +41,11 @@ public class LoginPageMyntra extends TestBase{
 		
 		user.click();
 		login.click();
-		userid.sendKeys(username);
-		password.sendKeys(pwd);
+		//userid.sendKeys(username);
+		//password.sendKeys(pwd);
+		
+		sendKeys(driver, userid, 10, username);
+		sendKeys(driver, password, 10, pwd);
 		
 		Thread.sleep(10000);
 		

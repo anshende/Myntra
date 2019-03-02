@@ -4,15 +4,17 @@ import java.io.FileNotFoundException;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.basepackage.Takescreenshot;
 import com.basepackage.TestBase;
 import com.qa.pages.HomepageMyntra;
 import com.qa.pages.LoginPageMyntra;
 import com.qa.pages.TshirtpageMyntra;
 
 
-
+@Listeners(Takescreenshot.class)
 public class HomepageMyntraTest extends TestBase {
 	LoginPageMyntra loginpage;
 	HomepageMyntra homepage;

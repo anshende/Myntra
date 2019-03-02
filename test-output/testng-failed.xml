@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TestNg]">
+  <listeners>
+    <listener class-name="com.retrylogic.AnnotationTransformer"/>
+  </listeners>
   <test thread-count="5" name="test(failed)">
     <classes>
       <class name="com.testpackage.HomepageMyntraTest">
@@ -11,8 +14,8 @@
       </class> <!-- com.testpackage.HomepageMyntraTest -->
       <class name="com.testpackage.LoginpageMyntraTest">
         <methods>
-          <include name="loginmyntra"/>
           <include name="setup"/>
+          <include name="title"/>
         </methods>
       </class> <!-- com.testpackage.LoginpageMyntraTest -->
     </classes>

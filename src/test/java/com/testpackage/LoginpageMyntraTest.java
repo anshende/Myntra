@@ -4,15 +4,19 @@ import java.io.FileNotFoundException;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.basepackage.Takescreenshot;
 import com.basepackage.TestBase;
 
 import com.qa.pages.HomepageMyntra;
 
 import com.qa.pages.LoginPageMyntra;
 
+
+@Listeners(Takescreenshot.class)
 public class LoginpageMyntraTest extends TestBase{
 	
 	LoginPageMyntra loginpage;
@@ -34,7 +38,7 @@ public class LoginpageMyntraTest extends TestBase{
 		
 		String actual_title=loginpage.verify_title();
 		
-		Assert.assertEquals(actual_title, "Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");
+		Assert.assertEquals(actual_title, "Online Shopping for Women");
 		
 	}
 	 
