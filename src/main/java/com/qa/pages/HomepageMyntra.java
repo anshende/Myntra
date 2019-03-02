@@ -38,7 +38,7 @@ public class HomepageMyntra extends TestBase {
 		Actions action=new Actions(driver);
 		action.moveToElement(men).build().perform();
 		//action.click(men_tshirt);
-	     wait.until(ExpectedConditions.elementToBeClickable(men_tshirt)).click();
+	     wait.until(ExpectedConditions.visibilityOf(men_tshirt)).click();
 		//men_tshirt.click();
 		Thread.sleep(5000);
 		return new TshirtpageMyntra();

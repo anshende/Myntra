@@ -38,7 +38,7 @@ public class LoginpageMyntraTest extends TestBase{
 		
 		String actual_title=loginpage.verify_title();
 		
-		Assert.assertEquals(actual_title, "Online Shopping for Women");
+		Assert.assertEquals(actual_title, "Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");
 		
 	}
 	 
