@@ -18,7 +18,7 @@ public class HomepageMyntra extends TestBase {
 	@FindBy(xpath="//div[@class='desktop-navLink']/a[@href='/shop/men']")
 	WebElement men;
 	
-	@FindBy(xpath="//a[@href='https://www.myntra.com/men-tshirts']")
+	@FindBy(xpath="//a[@href='/men-tshirts']")
 	WebElement men_tshirt;
 	
 	
