@@ -39,7 +39,7 @@ public class HomepageMyntraTest extends TestBase {
 	@Test
 	public void verify_title() {
 		String title=homepage.homepagetitle();
-		Assert.assertEquals(title, "Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra");	
+		Assert.assertEquals(title, "Men T-shirts - Buy T-shirt for Men Online in India | Myntra");	
 	}
 	
 	@Test

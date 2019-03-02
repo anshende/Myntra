@@ -6,7 +6,7 @@
       <class name="com.testpackage.HomepageMyntraTest">
         <methods>
           <include name="setup"/>
-          <include name="mentshirt"/>
+          <include name="verify_title"/>
         </methods>
       </class> <!-- com.testpackage.HomepageMyntraTest -->
     </classes>

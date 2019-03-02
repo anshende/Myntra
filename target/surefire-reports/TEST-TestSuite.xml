@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="78.269" tests="4" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="35.246" tests="4" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Aniket\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf262538016401353696.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Aniket\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4761945030473263210.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk/bin/../jre/bin/server;C:/Program Files/Java/jdk/bin/../jre/bin;C:/Program Files/Java/jdk/bin/../jre/lib/amd64;C:\Program Files\Apache Maven\apache-maven-3.6.0\bin;C:\Windows\System32;C:\Program Files\Java\jdk\bin;C:\Program Files\Java\jre\bin;C:\Program Files\Git\cmd;C:\Users\Aniket\Downloads\eclipse-java-oxygen-3a-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,45 +60,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="mentshirt" classname="com.testpackage.HomepageMyntraTest" time="64.809">
-    <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@href=&apos;https://www.myntra.com/men-tshirts&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@href='https://www.myntra.com/men-tshirts']' (tried for 20 second(s) with 500 milliseconds interval)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.qa.pages.HomepageMyntra.men_cat(HomepageMyntra.java:41)
-	at com.testpackage.HomepageMyntraTest.mentshirt(HomepageMyntraTest.java:47)
-</failure>
-    <system-out><![CDATA[Configuring TestNG with: TestNG652Configurator
-
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab) on port 36018
-Only local connections are allowed.
-Mar 02, 2019 1:38:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
+  <testcase name="mentshirt" classname="com.testpackage.HomepageMyntraTest" time="19.673"/>
+  <testcase name="verify_title" classname="com.testpackage.HomepageMyntraTest" time="0.547">
+    <failure message="expected [Online Shopping for Women, Men, Kids Fashion &amp; Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.testpackage.HomepageMyntraTest.verify_title(HomepageMyntraTest.java:42)
+]]></failure>
   </testcase>
-  <testcase name="verify_title" classname="com.testpackage.HomepageMyntraTest" time="0.004"/>
-  <testcase name="title" classname="com.testpackage.LoginpageMyntraTest" time="0.011"/>
-  <testcase name="loginmyntra" classname="com.testpackage.LoginpageMyntraTest" time="13.445"/>
+  <testcase name="title" classname="com.testpackage.LoginpageMyntraTest" time="0.01"/>
+  <testcase name="loginmyntra" classname="com.testpackage.LoginpageMyntraTest" time="15.016"/>
 </testsuite>

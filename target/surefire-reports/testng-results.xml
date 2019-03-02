@@ -2,40 +2,47 @@
 <testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="127439" started-at="2019-03-02T08:08:08Z" finished-at="2019-03-02T08:10:15Z">
+  <suite name="Surefire suite" duration-ms="92278" started-at="2019-03-02T08:22:54Z" finished-at="2019-03-02T08:24:27Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="127439" started-at="2019-03-02T08:08:08Z" finished-at="2019-03-02T08:10:15Z">
+    <test name="Surefire test" duration-ms="92278" started-at="2019-03-02T08:22:54Z" finished-at="2019-03-02T08:24:27Z">
       <class name="com.testpackage.LoginpageMyntraTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="setup" is-config="true" duration-ms="8960" started-at="2019-03-02T08:09:53Z" finished-at="2019-03-02T08:10:02Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="setup" is-config="true" duration-ms="14285" started-at="2019-03-02T08:23:57Z" finished-at="2019-03-02T08:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="title()[pri:1, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="title" duration-ms="11" started-at="2019-03-02T08:10:02Z" finished-at="2019-03-02T08:10:02Z">
+        <test-method status="PASS" signature="title()[pri:1, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="title" duration-ms="10" started-at="2019-03-02T08:24:12Z" finished-at="2019-03-02T08:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- title -->
-        <test-method status="PASS" signature="loginmyntra()[pri:2, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="loginmyntra" duration-ms="13445" started-at="2019-03-02T08:10:02Z" finished-at="2019-03-02T08:10:15Z">
+        <test-method status="PASS" signature="loginmyntra()[pri:2, instance:com.testpackage.LoginpageMyntraTest@3ac3fd8b]" name="loginmyntra" duration-ms="15017" started-at="2019-03-02T08:24:12Z" finished-at="2019-03-02T08:24:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginmyntra -->
       </class> <!-- com.testpackage.LoginpageMyntraTest -->
       <class name="com.testpackage.HomepageMyntraTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="setup" is-config="true" duration-ms="40165" started-at="2019-03-02T08:08:08Z" finished-at="2019-03-02T08:08:48Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="setup" is-config="true" duration-ms="42702" started-at="2019-03-02T08:22:54Z" finished-at="2019-03-02T08:23:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="mentshirt()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="mentshirt" duration-ms="64213" started-at="2019-03-02T08:08:48Z" finished-at="2019-03-02T08:09:52Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="PASS" signature="mentshirt()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="mentshirt" duration-ms="19666" started-at="2019-03-02T08:23:37Z" finished-at="2019-03-02T08:23:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mentshirt -->
+        <test-method status="FAIL" signature="verify_title()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="verify_title" duration-ms="24" started-at="2019-03-02T08:23:57Z" finished-at="2019-03-02T08:23:57Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@href='https://www.myntra.com/men-tshirts']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@href='https://www.myntra.com/men-tshirts']' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
-at com.qa.pages.HomepageMyntra.men_cat(HomepageMyntra.java:41)
-at com.testpackage.HomepageMyntraTest.mentshirt(HomepageMyntraTest.java:47)
+              <![CDATA[java.lang.AssertionError: expected [Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.testpackage.HomepageMyntraTest.verify_title(HomepageMyntraTest.java:42)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,49 +72,9 @@ at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:11
 at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
 at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://www.myntra.com/men-tshirts']"}
-  (Session info: chrome=72.0.3626.119)
-  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'LAPTOP-T5FP080U', ip: '192.168.0.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\Aniket\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.119, webStorageEnabled: true}
-Session ID: f2f7dcbdaaa654193ba19a9df820e07e
-*** Element info: {Using=xpath, value=//a[@href='https://www.myntra.com/men-tshirts']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-... 31 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- mentshirt -->
-        <test-method status="PASS" signature="verify_title()[pri:0, instance:com.testpackage.HomepageMyntraTest@43a25848]" name="verify_title" duration-ms="7" started-at="2019-03-02T08:09:53Z" finished-at="2019-03-02T08:09:53Z">
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_title -->
