@@ -27,6 +27,7 @@ import org.testng.annotations.Parameters;
 import com.test.util.testutil;
 
 public class TestBase {
+	
 	public static WebDriver driver;
 
     public static Properties prop;

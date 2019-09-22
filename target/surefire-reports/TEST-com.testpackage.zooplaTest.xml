@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="35.246" tests="4" errors="0" skipped="0" failures="1">
+<testsuite name="com.testpackage.zooplaTest" time="0" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Aniket\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4761945030473263210.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Aniket\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5552977791626090097.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk/bin/../jre/bin/server;C:/Program Files/Java/jdk/bin/../jre/bin;C:/Program Files/Java/jdk/bin/../jre/lib/amd64;C:\Program Files\Apache Maven\apache-maven-3.6.0\bin;C:\Windows\System32;C:\Program Files\Java\jdk\bin;C:\Program Files\Java\jre\bin;C:\Program Files\Git\cmd;C:\Users\Aniket\Downloads\eclipse-java-oxygen-3a-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,18 +60,4 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="mentshirt" classname="com.testpackage.HomepageMyntraTest" time="19.673"/>
-  <testcase name="verify_title" classname="com.testpackage.HomepageMyntraTest" time="0.547">
-    <failure message="expected [Online Shopping for Women, Men, Kids Fashion &amp; Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra] but found [Men T-shirts - Buy T-shirt for Men Online in India | Myntra]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.testpackage.HomepageMyntraTest.verify_title(HomepageMyntraTest.java:42)
-]]></failure>
-  </testcase>
-  <testcase name="title" classname="com.testpackage.LoginpageMyntraTest" time="0.01"/>
-  <testcase name="loginmyntra" classname="com.testpackage.LoginpageMyntraTest" time="15.016"/>
 </testsuite>

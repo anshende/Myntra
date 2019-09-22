@@ -12,8 +12,8 @@
   
     <classes>
         
-           <class name="com.testpackage.LoginpageMyntraTest"></class>
-           <class name="com.testpackage.HomepageMyntraTest"></class>
+           <class name="com.testpackage.zooplaTest"></class>
+          
           
     
     </classes>

@@ -1,5 +1,5 @@
 package com.testpackage;
-
+/*
 import java.io.FileNotFoundException;
 
 import org.testng.Assert;
@@ -22,7 +22,7 @@ public class HomepageMyntraTest extends TestBase {
 	
 	public HomepageMyntraTest() throws FileNotFoundException {
 	    super();
-	}
+	}	
 	
 	@BeforeClass
 	public void setup() throws FileNotFoundException, InterruptedException {
@@ -47,4 +47,4 @@ public class HomepageMyntraTest extends TestBase {
 		tshirt=homepage.men_cat();
 	}
 
-}
+}*/
